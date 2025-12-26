@@ -1,0 +1,12 @@
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/v1beta/*"
+  to = "/.netlify/functions/gateway/v1beta/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/upload/v1beta/*"
+  to = "/.netlify/functions/gateway/upload/v1beta/:splat"
+  status = 200
