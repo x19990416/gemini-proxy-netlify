@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gemini Proxy (Netlify)</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif; padding: 24px; }
+      code, pre { background: #f6f8fa; padding: 2px 6px; border-radius: 6px; }
+      pre { padding: 12px; overflow: auto; }
+      .ok { display:inline-block; padding: 2px 8px; border-radius: 999px; background: #e7f7ee; }
+    </style>
+  </head>
+  <body>
+    <h1>Gemini Proxy (Netlify) <span class="ok">OK</span></h1>
+    <p>这是一个 Netlify Functions 反向代理，用于转发 Gemini Developer API 请求。</p>
+
+    <h3>健康检查</h3>
+    <p>如果你能看到这页，说明站点已部署。</p>
+
+    <h3>API 示例</h3>
+    <pre><code>POST /v1beta/models/gemini-2.5-flash:generateContent
+Content-Type: application/json
+
+{"contents":[{"parts":[{"text":"hello"}]}]}</code></pre>
+
+    <p>（如果你启用了 <code>PROXY_TOKEN</code>，请求头里加 <code>x-proxy-token</code>。）</p>
+  </body>
+</html>
